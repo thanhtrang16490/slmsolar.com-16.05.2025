@@ -1,0 +1,114 @@
+---
+import GiaiPhapMai from "../../../components/giai-phap/giaiphapmai.astro";
+import Layout from "../../../layouts/Layout.astro";
+const data = {
+  pageContent: {
+    title: "Giải pháp thi công mái bê tông với SolarMax",
+    subtitle: "Giải pháp SoLarMax",
+    heading: "Giải pháp thi công mái bê tông",
+    description: "Hệ thống giá đỡ SolarMax – FR được thiết kế chuyên biệt cho mái bê tông, giúp tối ưu việc lắp đặt tấm pin năng lượng mặt trời trên các công trình dân dụng và công nghiệp. Giải pháp này có thể kết hợp với nền móng khung thép hoặc mái nhà có độ nghiêng, đảm bảo độ bền vững, tính thẩm mỹ cao và khả năng chống ăn mòn vượt trội."
+  },
+  mainImage: {
+    src: "/images/giai-phap-be-tong_main.png",
+    alt: "Giải pháp thi công mái bê tông với SolarMax"
+  },
+  headerImage: {
+    src: "/images/mai-be-tong/mai-be-tong-header.jpg",
+    alt: "Mái bê tông lắp điện mặt trời",
+    width: 1920,
+    height: 1080
+  },
+  components: [
+    {
+      title: "Kẹp biên nhôm",
+      description: "Cố định tấm pin tại các vị trí mép ngoài, đảm bảo độ chắc chắn và tính thẩm mỹ."
+    },
+    {
+      title: "Kẹp giữa nhôm",
+      description: "Được sử dụng để liên kết các tấm pin liền kề, giúp hệ thống vận hành ổn định."
+    },
+    {
+      title: "Mini-rail nhôm",
+      description: "Thanh ray nhôm nhỏ gọn, hỗ trợ lắp đặt nhanh chóng và tối ưu độ bám dính trên khung thép."
+    }
+  ],
+  steps: [
+    {
+      title: "Bước 1: Thi công khung sắt trên mái",
+      description: "Lắp đặt hệ thống khung sắt để tạo nền tảng chắc chắn cho hệ thống giá đỡ tấm pin. Đảm bảo khung sắt có độ bền cao, chịu lực tốt và tương thích với kết cấu mái bê tông.",
+      img: "/images/giai-phap-be-tong_00003.png"
+    },
+    {
+      title: "Bước 2: Lắp mini-rail trên khung sắt",
+      description: "Cố định thanh ray nhôm mini-rail lên khung sắt bằng các bulong chuyên dụng. Đảm bảo vị trí lắp đặt chính xác để tối ưu khả năng hấp thụ ánh sáng mặt trời.",
+      img: "/images/giai-phap-be-tong_00002.png"
+    },
+    {
+      title: "Bước 3: Lắp các tấm pin",
+      description: "Gắn các tấm pin lên mini-rail và cố định bằng kẹp biên, kẹp giữa để đảm bảo độ chắc chắn. Kiểm tra kết nối, độ nghiêng của tấm pin để đạt hiệu suất thu năng lượng tối đa.",
+      img: "/images/giai-phap-be-tong_00001.png"
+    }
+  ],
+  advantages: [
+    {
+      title: "Lắp đặt nhanh chóng",
+      description: "Hệ thống mini-rail giúp giảm thời gian thi công.",
+      icon: "clock"
+    },
+    {
+      title: "Tính linh hoạt cao",
+      description: "Có thể điều chỉnh phù hợp với nhiều loại mái bê tông và khung sắt.",
+      icon: "adjustments"
+    },
+    {
+      title: "Độ bền cao",
+      description: "Vật liệu nhôm cao cấp chống ăn mòn, chịu lực tốt, đảm bảo tuổi thọ lâu dài.",
+      icon: "shield"
+    },
+    {
+      title: "Hiệu suất tối ưu",
+      description: "Thiết kế tối ưu hóa góc nghiêng giúp tấm pin hấp thụ năng lượng mặt trời hiệu quả nhất.",
+      icon: "chart"
+    }
+  ],
+  sampleImages: [
+    {
+      src: "/images/giai-phap-mai-be-tong-00001.JPG",
+      alt: "Lắp đặt điện mặt trời mái bê tông cho nhà xưởng"
+    },
+    {
+      src: "/images/giai-phap-mai-be-tong-00002.JPG",
+      alt: "Hệ thống điện mặt trời mái bê tông công nghiệp"
+    },
+    {
+      src: "/images/giai-phap-mai-be-tong-00003.JPG",
+      alt: "Thi công điện mặt trời mái bê tông nhà máy"
+    },
+    {
+      src: "/images/giai-phap-mai-be-tong-00004.JPG",
+      alt: "Lắp đặt pin năng lượng mặt trời mái bê tông"
+    },
+    {
+      src: "/images/giai-phap-mai-be-tong-00005.JPG",
+      alt: "Hệ thống năng lượng mặt trời mái bê tông"
+    },
+    {
+      src: "/images/giai-phap-mai-be-tong-00006.JPG",
+      alt: "Giải pháp điện mặt trời mái bê tông"
+    }
+  ],
+  systemName: "FR"
+};
+---
+<Layout title={data.pageContent.title}>
+<GiaiPhapMai 
+  pageContent={data.pageContent}
+  components={data.components}
+  steps={data.steps}
+  advantages={data.advantages}
+  sampleImages={data.sampleImages}
+  systemName={data.systemName}
+  mainImage={data.mainImage}
+  headerImage={data.headerImage}
+/>
+</Layout>

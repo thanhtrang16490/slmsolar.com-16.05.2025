@@ -1,0 +1,224 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const items = [
+    { title: "Khách hàng", value: "1,000+" },
+    { title: "Kinh nghiệm", value: "10 năm" },
+    { title: "Miền Bắc", value: "3 kho" },
+    { title: "Đối tác toàn cầu", value: "Top 3" },
+];
+
+const partners = [
+    { name: "ja-solar", logo: "/images/brand-ja-solar-logo.svg" },
+    { name: "canadian-solar", logo: "https://scoullerenergy.com.au/images/canadian-solar.png" },
+    { name: "longi-solar", logo: "https://shop.solar-kit.eu/storage/uploads/crtSm54pxUHf9zqwwlg00tCW1KRmYOeF2W58L8vs.png" },
+    { name: "solis", logo: "/images/brand-solis-logo.svg" },
+    { name: "invt", logo: "/images/brand-invt-logo.png" },
+    { name: "growatt", logo: "https://pvgroup.pl/wp-content/uploads/2019/10/LogoGrowatt.png" },
+    { name: "easyway", logo: "/images/brand-easyway-logo.svg" },
+    { name: "tran-phu", logo: "/images/logo-tran-phu.png" },
+    { name: "leader", logo: "https://vinasolution.com/wp-content/uploads/2021/01/logo-leader.jpg" },
+    { name: "cadivi", logo: "https://cdn.haitrieu.com/wp-content/uploads/2023/11/Logo-Cong-Ty-Day-Cap-Dien-Viet-Nam.png" },
+    { name: "pntech", logo: "https://pinmattroi.org/wp-content/uploads/2020/12/logo-pntech.png" },
+    { name: "nival", logo: "https://nival.vn/uploads/data/5140/files/images/logo/logo-Nival-1.png" },
+    { name: "ls", logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/LS_logo.svg" },
+    { name: "cadisun", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/CADI-SUN.gif/1200px-CADI-SUN.gif" },
+    { name: "aisikai", logo: "https://ilrorwxhkipjlm5p.leadongcdn.com/cloud/onBprKokRlkSqkrpqmlpk/LOGO-AISIKAIlanse.png" },
+    { name: "vinacontrol", logo: "https://www.vinacontrol.com.vn/img/04%20Homepage_logo.png" },
+    { name: "rsic", logo: "https://kiemdinhkhuvuc1.vn/wp-content/uploads/2020/10/logo-website-e1601584209799.png" },
+    { name: "suntre", logo: "https://gg.lnwfile.com/_webp_max_images/300/300/li/pc/mo.webp" },
+];
+---
+
+<Layout title="Giới thiệu">
+  <header class="header-section">
+    <div class="relative isolate overflow-hidden pt-14">
+        <img src="/images/ve-chung-toi/ve-chung-toi-header.jpg" alt="Solar panels on modern building rooftop" class="absolute inset-0 -z-10 size-full object-cover">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden sm:-top-80" aria-hidden="true">
+          <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+        <div class="mx-auto container px-6 lg:px-8">
+          <div class="mx-auto py-32 sm:py-48 lg:py-32">
+            <div class="hidden sm:mb-8 sm:flex sm:justify-start">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-start">
+                <div class="text-white text-left container mx-auto w-full">
+                  <span class="text-2xl mx-auto font-semibold tracking-tight text-balance text-white sm:text-4xl">Về chúng tôi</span>
+                  <div class="mt-8">
+                    <a href="https://zalo.me/0964920242" target="_blank" class="rounded-md bg-red-600 px-6 py-3 text-lg font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
+                      Liên hệ tư vấn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+          <div class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+    </div>
+  </header>
+
+  <!-- <div class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <CompanyHistory client:load />
+  </div> -->
+
+    <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg class="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+            <defs>
+              <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+              <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+          </svg>
+        </div>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:container lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="lg:max-w-lg">
+                <p class="text-base/7 font-semibold text-green-600">SOLARMAX</p>
+                <h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">Giải pháp Năng lượng Mặt trời Cao cấp</h1>
+                <!-- <p class="mt-6 text-xl/8 text-gray-700"></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+            <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem]" src="/images/banner-dien-mat-troi-xuan-thien.jpeg" alt="">
+          </div>
+          <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:container lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+            <div class="lg:pr-4">
+              <div class="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
+                <p class="mb-4"><span class="font-bold text-green-600">CÔNG TY CỔ PHẦN ĐẦU TƯ SLM</span> tham gia vào lĩnh vực điện mặt trời tại Việt Nam từ năm 2019, với trụ sở chính đặt tại Hà Nội, Việt Nam. SolarMax mang trong mình sứ mệnh "Điện xanh mái nhà Việt", cam kết cung cấp các giải pháp năng lượng mặt trời tiên tiến, bền vững và hiệu quả cho mọi ngôi nhà và doanh nghiệp trên khắp Việt Nam.</p>
+                <p class="mb-4">Với mục tiêu đến năm 2030, SolarMax sẽ hoàn thành lắp đặt 1 triệu m² tấm pin năng lượng mặt trời trên các mái nhà, góp phần xây dựng một tương lai xanh, giảm thiểu khí thải và tiết kiệm chi phí năng lượng cho người dân.</p>
+                <p>Chúng tôi tự hào sở hữu đội ngũ R&D giàu kinh nghiệm, kết hợp cùng các đối tác công nghệ hàng đầu trong ngành để phát triển các sản phẩm và giải pháp đạt tiêu chuẩn quốc tế. SolarMax luôn lấy <span class="font-bold text-green-600">"Tin - Tốc- Tín"</span> làm giá trị cốt lõi:</p>
+                <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 size-6 flex-none text-green-600" viewBox="0 -8 72 72" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path d="M64,12.78v17s-3.63.71-4.38.81-3.08.85-4.78-.78C52.22,27.25,42.93,18,42.93,18a3.54,3.54,0,0,0-4.18-.21c-2.36,1.24-5.87,3.07-7.33,3.78a3.37,3.37,0,0,1-5.06-2.64,3.44,3.44,0,0,1,2.1-3c3.33-2,10.36-6,13.29-7.52,1.78-1,3.06-1,5.51,1C50.27,12,53,14.27,53,14.27a2.75,2.75,0,0,0,2.26.43C58.63,14,64,12.78,64,12.78ZM27,41.5a3,3,0,0,0-3.55-4.09,3.07,3.07,0,0,0-.64-3,3.13,3.13,0,0,0-3-.75,3.07,3.07,0,0,0-.65-3,3.38,3.38,0,0,0-4.72.13c-1.38,1.32-2.27,3.72-1,5.14s2.64.55,3.72.3c-.3,1.07-1.2,2.07-.09,3.47s2.64.55,3.72.3c-.3,1.07-1.16,2.16-.1,3.46s2.84.61,4,.25c-.45,1.15-1.41,2.39-.18,3.79s4.08.75,5.47-.58a3.32,3.32,0,0,0,.3-4.68A3.18,3.18,0,0,0,27,41.5Zm25.35-8.82L41.62,22a3.53,3.53,0,0,0-3.77-.68c-1.5.66-3.43,1.56-4.89,2.24a8.15,8.15,0,0,1-3.29,1.1,5.59,5.59,0,0,1-3-10.34C29,12.73,34.09,10,34.09,10a6.46,6.46,0,0,0-5-2C25.67,8,18.51,12.7,18.51,12.7a5.61,5.61,0,0,1-4.93.13L8,10.89v19.4s1.59.46,3,1a6.33,6.33,0,0,1,1.56-2.47,6.17,6.17,0,0,1,8.48-.06,5.4,5.4,0,0,1,1.34,2.37,5.49,5.49,0,0,1,2.29,1.4A5.4,5.4,0,0,1,26,34.94a5.47,5.47,0,0,1,3.71,4,5.38,5.38,0,0,1,2.39,1.43,5.65,5.65,0,0,1,1.48,4.89,0,0,0,0,1,0,0s.8.9,1.29,1.39a2.46,2.46,0,0,0,3.48-3.48s2,2.48,4.28,1c2-1.4,1.69-3.06.74-4a3.19,3.19,0,0,0,4.77.13,2.45,2.45,0,0,0,.13-3.3s1.33,1.81,4,.12c1.89-1.6,1-3.43,0-4.39Z" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Tin: </strong>Xây dựng niềm tin vững chắc với khách hàng thông qua chất lượng và sự minh bạch.</span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 size-6 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Tốc:</strong> Triển khai nhanh chóng và hiệu quả các giải pháp năng lượng xanh.</span>
+                  </li>
+                  <li class="flex gap-x-3">
+                    <svg class="mt-1 size-6 flex-none text-green-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+                    </svg>
+                    <span><strong class="font-semibold text-gray-900">Tín: </strong>Giữ vững cam kết và trách nhiệm trong mọi dự án.</span>
+                  </li>
+                </ul>
+                <p class="mt-8">Chúng tôi không chỉ cung cấp giải pháp năng lượng mặt trời, mà còn mang đến niềm tin về một tương lai bền vững, nơi mỗi mái nhà Việt đều tỏa sáng bằng nguồn năng lượng xanh. SolarMax cam kết đồng hành cùng bạn, kiến tạo giá trị lâu dài và cùng nhau xây dựng một Việt Nam phát triển vững mạnh.</p>
+                <div class="mt-8">
+                  <p class="text-lg italic text-gray-900">Trân trọng,</p>
+                  <p class="mt-3 text-lg text-gray-900">Huy Le (Mr.)</p>
+                  <p class="text-lg text-gray-900">SolarMax CEO</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="bg-white">
+        <main class="isolate">
+           
+            <h1
+            class="text-left tracking-tight text-4xl p-6 font-bold leading-10 text-gray-900 block sm:block lg:hidden"
+        >
+            Chúng tôi có
+        </h1>
+            <dl
+                class="grid grid-cols-2 gap-0.5 overflow-hidden lg:rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4 lg:mx-48"
+            >
+                {
+                    items.map((item) => (
+                        <div class="flex flex-col bg-red-600 p-8 lg:p-8 sm:p-1">
+                            <dt class="font-semibold text-md leading-6 text-white">
+                                {item.title}
+                            </dt>
+                            <dd class="order-first text-4xl font-semibold tracking-tight text-white">
+                                {item.value}
+                            </dd>
+                        </div>
+                    ))
+                }
+            </dl>
+
+            <div class="relative isolate -z-10 mt-16 sm:mt-12">
+                <div
+                    class="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]"
+                >
+                    <svg
+                        class="h-[40rem] w-[80rem] flex-none stroke-gray-200"
+                        aria-hidden="true"
+                    >
+                        <defs>
+                            <pattern
+                                id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
+                                width="200"
+                                height="200"
+                                x="50%"
+                                y="50%"
+                                patternUnits="userSpaceOnUse"
+                                patternTransform="translate(-100 0)"
+                            >
+                                <path d="M.5 200V.5H200" fill="none"></path>
+                            </pattern>
+                        </defs>
+                        <svg
+                            x="50%"
+                            y="50%"
+                            class="overflow-visible fill-gray-50"
+                        >
+                            <path
+                                d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
+                                stroke-width="0"></path>
+                        </svg>
+                        <rect
+                            width="100%"
+                            height="100%"
+                            stroke-width="0"
+                            fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
+                        ></rect>
+                    </svg>
+                </div>
+                <div class="mx-auto container px-6 lg:px-8">
+                    <h1 class="text-left tracking-tight text-4xl font-bold leading-10 text-gray-900 block sm:block lg:hidden">
+                        Đối tác
+                    </h1>
+                    <h1 class="text-center tracking-tight text-4xl font-bold leading-10 text-gray-900 hidden sm:hidden lg:block">
+                        Đối tác chiến lược
+                    </h1>
+                    <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-6">
+                        {partners.map((partner) => (
+                            <img
+                                class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+                                src={partner.logo}
+                                alt={partner.name}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div class="mx-auto mt-16 pb-16 container px-6 sm:mt-40 lg:px-8">
+                <div
+                    class="mx-auto flex max-w-2xl flex-col items-end justify-between gap-16 lg:mx-0 lg:max-w-none lg:flex-row"
+                >
+                 
+                </div>
+            </div>
+        </main>
+    </div>
+   
+      
+</Layout>

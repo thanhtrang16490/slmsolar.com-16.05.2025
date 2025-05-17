@@ -1,0 +1,99 @@
+---
+const categories = [
+  {
+    title: "Bám tải 1 pha 5.2kW",
+    image:
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-01-category-01.jpg",
+    href: "#",
+  },
+  {
+    title: "Bám tải 1 pha 8.7kW",
+    image:
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-01-category-02.jpg",
+    href: "#",
+  },
+  {
+    title: "Bám tải 3 pha 8.7kW",
+    image:
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-01-category-04.jpg",
+    href: "#",
+  },
+  {
+    title: "Bám tải 3 pha 13.3kW",
+    image:
+      "https://tailwindui.com/plus-assets/img/ecommerce-images/home-page-01-category-05.jpg",
+    href: "#",
+  },
+];
+---
+
+<div class="bg-white pb-28 hidden lg:block">
+  <section
+    aria-labelledby="category-heading"
+    class="pt-6 sm:pt-8 xl:mx-auto xl:container xl:px-8"
+  >
+    <div
+      class="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0"
+    >
+      <h2
+        id="category-heading"
+        class="text-2xl font-bold tracking-tight text-gray-900"
+      >
+        Hệ thống điện mặt trời độc lập - Hybrid
+      </h2>
+      <a
+        href="#"
+        class="hidden text-sm font-semibold text-green-600 hover:text-green-500 sm:block"
+      >
+        Xem thêm các gói Combo
+        <span aria-hidden="true"> &rarr;</span>
+      </a>
+    </div>
+
+    <div class="mt-4 flow-root">
+      <div class="-my-2">
+        <div
+          class="relative box-content h-80 overflow-x-auto py-2 xl:overflow-visible"
+        >
+          <div
+            class="absolute flex space-x-8 px-4 sm:px-6 lg:px-8 xl:relative xl:grid xl:grid-cols-4 xl:gap-x-8 xl:space-x-0 xl:px-0"
+          >
+            {
+              categories.map((category) => (
+                <a
+                  href={category.href}
+                  class="relative flex h-96 w-56 flex-col overflow-hidden rounded-lg p-6 hover:opacity-75 xl:w-auto shadow-lg shadow-gray-300"
+                >
+                  <span aria-hidden="true" class="absolute inset-0">
+                    <img
+                      src={category.image}
+                      alt={category.title}
+                      class="size-full object-cover"
+                    />
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="absolute inset-x-0 bottom-0 h-2/3 bg-linear-to-t from-gray-800 opacity-50"
+                  />
+                  <span class="relative mt-auto text-left text-xl font-bold text-black/7">
+                    {category.title}
+                  </span>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 px-4 sm:hidden">
+      <a
+        href="#"
+        class="block text-sm font-semibold text-green-600 hover:text-green-500"
+      >
+        Xem thêm các gói Combo
+        <span aria-hidden="true"> &rarr;</span>
+      </a>
+    </div>
+  </section>
+</div>

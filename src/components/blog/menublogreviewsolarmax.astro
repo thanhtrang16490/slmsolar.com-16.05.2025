@@ -1,0 +1,46 @@
+---
+// Danh sách danh mục blog tĩnh
+const BLOG_CATEGORIES = [
+  { id: 'hieu-dung-mua-dung', name: 'Hiểu đúng mua đúng', slug: 'hieu-dung-mua-dung' },
+  { id: 'review-solarmax', name: 'Review SolarMax', slug: 'review-solarmax' },
+  { id: 'hoi-xoay-hoi-xoay', name: 'Hỏi xoay hỏi xoáy', slug: 'hoi-xoay-hoi-xoay' },
+  { id: 'em-biet-khong', name: 'Em biết không', slug: 'em-biet-khong' },
+];
+
+// Mặc định chọn danh mục "Em biết không"
+let selectedCategory: string | null = 'review-solarmax';
+---
+
+<div class="lg:w-1/4">
+  <div class="sticky top-28">
+    <div class="bg-white/30 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        Chuyên mục
+      </h3>
+      <nav class="flex flex-col gap-2">
+        <a
+          href="/blog"
+          class={`text-left px-4 py-2 rounded-lg transition-colors duration-200 ${
+            selectedCategory === null
+              ? 'bg-green-600 text-white'
+              : 'hover:bg-green-50 text-gray-700'
+          }`}
+        >
+          Tất cả
+        </a>
+        {BLOG_CATEGORIES.map((category) => (
+          <a
+            href={`/blog/${category.slug}`}
+            class={`text-left px-4 py-2 rounded-lg transition-colors duration-200 ${
+              selectedCategory === category.id
+                ? 'bg-green-600 text-white'
+                : 'hover:bg-green-50 text-gray-700'
+            }`}
+          >
+            {category.name}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</div>

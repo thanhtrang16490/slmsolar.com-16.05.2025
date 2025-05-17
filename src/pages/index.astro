@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Mobile from "../components/Mobile.astro";
+import VideoSolarmax from "../components/video.solarmax.tsx";
+import { AstroSeo } from "@astrolib/seo";
+import Whychoise from "../components/whychoise.astro";
+import Whychoisesolarmax from "../components/home/whychoisesolarmax.tsx";
+import Slider from "../components/home/slider.tsx";
+import Combogiadinhintro from "../components/home/combogiadinhintro.tsx";
+import Combocongnghiepintro from "../components/home/combocongnghiepintro.tsx";
+import QA from "../components/home/qa.tsx";
+import Customer from "../components/home/custommer.tsx";
+import Message from "../components/home/message.astro";
+import DoiTac from "../components/home/doitac.tsx";
+import Ongridmobile from "../components/mobile/Ongridmobile.astro";
+import Offgridmobile from "../components/mobile/Offgridmobile.astro";
+import Hoidamobile from "../components/mobile/hoidapmobile.astro";
+import ServiceGalleryMobile from "../components/mobile/ServiceGalleryMobile.astro";
+---
+
+<AstroSeo
+  title="Điện xanh mái nhà Việt"
+  description="Đến năm 2030, Solarmax hoàn thành lắp đặt 1 triệu m2 tấm pin năng lượng mặt trời cho mái nhà Việt."
+/>
+
+<Layout title="Bật để tiết kiệm điện">
+  <VideoSolarmax client:load />
+  <Slider client:load />
+  <Whychoise />
+  <Whychoisesolarmax client:load />
+  <Combogiadinhintro client:load />
+  <Combocongnghiepintro client:load />
+  <Mobile />
+  <Ongridmobile zalo = "0964920242"/>
+  <Offgridmobile zalo = "0964920242"/>
+  
+  <Message />
+  <QA client:load />
+
+  <ServiceGalleryMobile />
+
+  <Hoidamobile />
+  <Customer client:load />
+  <DoiTac client:load />
+  
+</Layout>

@@ -1,0 +1,264 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+const content = {
+  pageContent: {
+    title: "Gói sản phẩm",
+    subtitle: "Giải pháp SoLarMax",
+    heading: "Giải pháp vệ sinh tấm pin",
+    description: "Vệ sinh tấm pin năng lượng mặt trời định kỳ giúp duy trì hiệu suất và kéo dài tuổi thọ hệ thống"
+  },
+  notices: [
+    {
+      icon: "cloud",
+      title: "Thời điểm vệ sinh tấm pin",
+      description: "Việc làm sạch tấm pin nên được thực hiện vào sáng sớm, buổi tối, hoặc vào những ngày mưa. Đồng thời hãy chọn thời điểm khi ánh nắng không quá mạnh"
+    },
+    {
+      icon: "calendar",
+      title: "Tần suất vệ sinh",
+      description: "Nên vệ sinh tấm pin định kỳ 3-6 tháng/lần tùy theo môi trường lắp đặt. Đối với khu vực nhiều bụi, gần đường, khu công nghiệp nên vệ sinh thường xuyên hơn"
+    },
+    {
+      icon: "chart",
+      title: "Lợi ích khi vệ sinh định kỳ",
+      description: "Vệ sinh tấm pin thường xuyên giúp tăng hiệu suất lên đến 30%, kéo dài tuổi thọ thiết bị và đảm bảo hiệu quả đầu tư của hệ thống điện mặt trời"
+    }
+  ],
+  steps: [
+    {
+      title: "Bước 1",
+      description: "Ngắt kết nối điện (Gạt át DC trong tủ điện)"
+    },
+    {
+      title: "Bước 2",
+      description: "Sử dụng bàn chải và hỗn hợp xà phòng với nước rồi nhẹ nhàng lau chùi lên bề mặt"
+    },
+    {
+      title: "Bước 3",
+      description: "Rửa lại bề mặt tấm pin bằng nước sạch"
+    },
+    {
+      title: "Bước 4",
+      description: "Chờ 30-45 phút cho tấm pin khô ráo. Sau khi tấm pin đã khô tiến hành bật lại át DC"
+    }
+  ],
+  guidelines: [
+    {
+      icon: "hand",
+      description: "Không sử dụng tay trần. Đeo găng tay sạch để tránh để lại dấu vân tay và bụi bẩn trên kính"
+    },
+    {
+      icon: "lock",
+      description: "Không sử dụng các công cụ kim loại (lưỡi dao, vật liệu mài mòn khác) dẫn đến trầy xước bề mặt kính, làm giảm hiệu suất hoặc thậm chí là hư hỏng bề mặt tấm pin."
+    },
+    {
+      icon: "gear",
+      description: "Không sử dụng chất tẩy mài mòn, chất làm sạch mài mòn, chất đánh bóng, natri hydroxide, benzen, chất pha loãng nitro, axit hoặc kiềm, và các chất hóa học khác"
+    },
+    {
+      icon: "refresh",
+      description: "Có thể sử dụng các loại vật liệu mềm như xốp, chổi lông, miếng bọt biển mềm, bàn chải mềm"
+    },
+    {
+      icon: "signal",
+      description: "Có thể sử dụng tất cả các loại chất tẩy kính thương mại, cồn/ethanol/methanol"
+    },
+    {
+      icon: "laptop",
+      description: "Không sử dụng hơi nước hoặc hóa chất ăn mòn để tăng tốc độ làm sạch"
+    },
+    {
+      icon: "laptop",
+      description: "Không làm sạch bề mặt bị nứt và phần liên kết giữa tấm pin với dây vì có thể gây chập điện"
+    },
+    {
+      icon: "laptop",
+      description: "Không bước, đứng hoặc ngồi trên tấm pin trong quá trình vệ sinh"
+    }
+  ],
+  images: [
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-1.jpeg",
+      alt: "Nhân viên kỹ thuật đang vệ sinh tấm pin mặt trời",
+      title: "Quy trình vệ sinh chuyên nghiệp"
+    },
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-2.jpeg",
+      alt: "Kiểm tra bề mặt tấm pin sau khi vệ sinh",
+      title: "Kiểm tra chất lượng"
+    },
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-3.jpeg",
+      alt: "Sử dụng thiết bị chuyên dụng làm sạch",
+      title: "Thiết bị chuyên nghiệp"
+    },
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-4.jpeg",
+      alt: "Đội ngũ kỹ thuật làm việc trên mái nhà",
+      title: "Đội ngũ chuyên nghiệp"
+    },
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-8.jpeg",
+      alt: "So sánh trước và sau khi vệ sinh",
+      title: "Hiệu quả rõ rệt"
+    },
+    {
+      src: "/images/ve-sinh-tam-pin/ve-sinh-pin-9.jpeg",
+      alt: "Hoàn thiện công việc vệ sinh",
+      title: "Kết quả hoàn hảo"
+    }
+  ]
+};
+---
+
+<Layout title={content.pageContent.title}>
+  <header class="header-section">
+    <div class="relative isolate overflow-hidden pt-14">
+        <img src="/images/giai-phap-ve-sinh/vgiai-phap-bao-tri-header.jpg" 
+             alt="Vệ sinh tấm pin năng lượng mặt trời" 
+             class="absolute inset-0 -z-10 size-full object-cover brightness-50 sm:brightness-100" />
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto py-16 sm:py-48 lg:py-32">
+            <div class="sm:mb-8 flex justify-start">
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-start">
+                <div class="text-white text-left container mx-auto w-full px-4 sm:px-6">
+                  <span class="text-xl mx-auto font-semibold tracking-tight text-white sm:text-4xl">Giải pháp bảo trì Solarmax</span>
+                  <div class="mt-4 sm:mt-8">
+                    <a href="https://zalo.me/0964920242" target="_blank" 
+                       class="inline-block rounded-md bg-red-600 px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-semibold text-white shadow-sm hover:bg-red-500">
+                      Liên hệ tư vấn
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </header>
+  
+    <div class="bg-white py-8 sm:py-16">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:mx-0">
+            <p class="text-base font-semibold text-green-600">{content.pageContent.subtitle}</p>
+            <h1 class="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 lg:text-5xl">{content.pageContent.heading}</h1>
+            <p class="mt-4 sm:mt-6 text-base sm:text-lg text-pretty text-gray-600 max-w-3xl">{content.pageContent.description}</p>
+          </div>
+          
+          <div class="mt-8 sm:mt-16 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2">
+            <div>
+              <img
+                src="/images/ve-sinh-tam-pin/ve-sinh-pin-11.jpeg"
+                alt="Công nhân vệ sinh tấm pin năng lượng mặt trời"
+                class="rounded-xl shadow-lg object-cover w-full aspect-[4/3] lg:aspect-[16/9]"
+              />
+             
+            </div>
+            <div class="flex flex-col justify-center">
+              <ul role="list" class="space-y-4 sm:space-y-6 text-gray-600">
+                {content.notices.map(notice => (
+                  <li class="flex gap-x-3 bg-gray-50 p-3 sm:p-4 rounded-lg transition duration-300 hover:bg-gray-100 hover:shadow-md">
+                    {notice.icon === "cloud" && (
+                      <svg class="mt-1 size-5 flex-none text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                      </svg>
+                    )}
+                    {notice.icon === "calendar" && (
+                      <svg class="mt-1 size-5 flex-none text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+                        <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                      </svg>
+                    )}
+                    {notice.icon === "chart" && (
+                      <svg class="mt-1 size-5 flex-none text-green-600" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 0 1 8.25-8.25.75.75 0 0 1 .75.75v6.75H18a.75.75 0 0 1 .75.75 8.25 8.25 0 0 1-16.5 0Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M12.75 3a.75.75 0 0 1 .75-.75 8.25 8.25 0 0 1 8.25 8.25.75.75 0 0 1-.75.75h-7.5a.75.75 0 0 1-.75-.75V3Z" clip-rule="evenodd" />
+                      </svg>
+                    )}
+                    <div>
+                      <strong class="block font-semibold text-gray-900 mb-1">{notice.title}</strong>
+                      <span class="text-gray-600">{notice.description}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-50 py-8 sm:py-16">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl text-center mb-8 sm:mb-16">Quy trình vệ sinh</h2>
+          <div class="mx-auto grid max-w-2xl grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+            {content.steps.map((step, index) => (
+              <div class="relative bg-white p-4 sm:p-6 rounded-lg shadow-sm transition duration-300 hover:shadow-lg hover:scale-105">
+                <div class="flex items-center mb-4">
+                  <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white font-semibold">
+                    {index + 1}
+                  </span>
+                  <h3 class="ml-3 font-semibold text-gray-900">{step.title}</h3>
+                </div>
+                <p class="text-gray-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+    </div>
+
+    <div class="mx-auto container px-4 sm:px-6 lg:px-8 mt-8 sm:mt-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+            <div class="lg:sticky lg:top-4">
+                <img
+                    src= "/images/ve-sinh-tam-pin/ve-sinh-pin-main.jpeg"
+                    alt="Dụng cụ vệ sinh tấm pin"
+                    class="rounded-xl shadow-lg object-cover w-full aspect-[3/4] lg:max-h-[600px]"
+                />
+            </div>
+            <div class="space-y-4 sm:space-y-6">
+                <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-gray-900 lg:text-3xl">Hướng dẫn và lưu ý quan trọng</h2>
+                <dl class="grid grid-cols-1 gap-4 sm:gap-6">
+                    {content.guidelines.map((guideline, index) => (
+                        <div class="relative bg-white p-4 sm:p-6 rounded-lg shadow-sm">
+                            <dt class="flex items-center gap-4">
+                              <span class="flex items-center justify-center w-8 h-8 rounded-full bg-green-100 text-green-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+                                </svg>
+                              </span>
+                              <span class="text-gray-900 font-medium">Lưu ý {index + 1}</span>
+                            </dt>
+                            <dd class="mt-2 text-gray-600">{guideline.description}</dd>
+                        </div>
+                    ))}
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white py-8 sm:py-16">
+        <div class="mx-auto container px-4 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 lg:text-4xl">Hình ảnh thực tế</h2>
+                <p class="mt-4 sm:mt-6 text-base sm:text-lg leading-8 text-gray-600">
+                    Một số hình ảnh về quá trình vệ sinh tấm pin năng lượng mặt trời của đội ngũ kỹ thuật SolarMax
+                </p>
+            </div>
+            <div class="mx-auto mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 lg:grid-cols-3">
+                {content.images.map((image) => (
+                    <div class="relative isolate overflow-hidden rounded-2xl bg-gray-900">
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            class="aspect-[3/2] w-full object-cover hover:scale-105 transition duration-300"
+                        />
+                        {/* <div class="absolute bottom-0 left-0 right-0 bg-black/50 p-3 sm:p-4">
+                            <h3 class="text-white text-base sm:text-lg font-medium">{image.title}</h3>
+                        </div> */}
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import UnavailableContent from '../../../components/UnavailableContent.astro';
+
+// Không còn sử dụng API Strapi
+// import fetchApi from "../../../lib/strapi.ts";
+// import type { BlogCategory } from "../../../interfaces/blogs.ts";
+
+// Trong trang động [slug].astro, chúng ta cần trả về một mảng với ít nhất một phần tử
+// để tránh lỗi URL constructor trong quá trình build
+export function getStaticPaths() {
+  // Trả về một phần tử giả
+  return [
+    { params: { slug: 'placeholder' } }
+  ];
+}
+---
+
+<Layout title="Danh mục Blog - Nội dung không khả dụng">
+  <UnavailableContent 
+    title="Danh mục blog không khả dụng" 
+    description="Nội dung danh mục blog này tạm thời không hiển thị được do chúng tôi đang nâng cấp hệ thống. Vui lòng quay lại sau hoặc xem các nội dung khác."
+  />
+</Layout> 

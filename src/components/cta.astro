@@ -1,0 +1,115 @@
+<div class="bg-gradient-to-r from-green-500 to-teal-500 py-16 sm:py-24 lg:py-32 hidden md:block">
+    <div class="mx-auto grid container grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
+      <h2 class="max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl lg:col-span-7">Bạn cần tư vấn? <br/>Hãy để lại thông tin liên hệ.</h2>
+      <form id="contactForm" class="w-full max-w-md lg:col-span-5 lg:pt-2">
+        <div class="flex gap-x-4">
+          <label for="phone-number" class="sr-only">Số điện thoại</label>
+          <input id="phone-number" name="phone" type="tel" autocomplete="tel" required class="min-w-0 flex-auto rounded-md bg-white/10 px-3.5 py-2 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-white/75 focus:outline-2 focus:-outline-offset-2 focus:outline-white sm:text-sm/6" placeholder="Nhập số điện thoại của bạn">
+          <button type="submit" id="submitBtn" class="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-green-700 shadow-sm hover:bg-green-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Liên hệ ngay</button>
+        </div>
+        <p id="phoneError" class="mt-2 text-sm/6 text-red-200 font-semibold hidden">Vui lòng nhập số điện thoại hợp lệ (10 số, bắt đầu bằng 0)</p>
+        <p class="mt-4 text-sm/6 text-gray-100">Chúng tôi cam kết bảo mật thông tin của bạn. Xem <a href="/thong-tin/privacy-policy" class="font-semibold text-white hover:text-green-100">chính sách bảo mật</a>.</p>
+        <div id="formStatus" class="mt-4 text-sm/6 hidden">
+          <p id="successMessage" class="text-white font-semibold bg-green-600 p-2 rounded hidden">Cảm ơn bạn! Chúng tôi sẽ liên hệ lại sớm.</p>
+          <p id="errorMessage" class="text-white font-semibold bg-red-600 p-2 rounded hidden">Có lỗi xảy ra. Vui lòng thử lại sau.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    const formStatus = document.getElementById('formStatus') as HTMLDivElement;
+    const successMessage = document.getElementById('successMessage') as HTMLParagraphElement;
+    const errorMessage = document.getElementById('errorMessage') as HTMLParagraphElement;
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+    const phoneInput = document.getElementById('phone-number') as HTMLInputElement;
+    const phoneError = document.getElementById('phoneError') as HTMLParagraphElement;
+
+    // Hàm validate số điện thoại Việt Nam
+    function validateVietnamesePhoneNumber(phone: string): boolean {
+      // Kiểm tra số điện thoại Việt Nam: bắt đầu bằng 0, có 10 chữ số
+      const phoneRegex = /^0\d{9}$/;
+      return phoneRegex.test(phone);
+    }
+
+    if (form && formStatus && successMessage && errorMessage && submitBtn && phoneInput && phoneError) {
+      // Validate khi người dùng nhập
+      phoneInput.addEventListener('input', function() {
+        const phoneNumber = phoneInput.value.trim();
+        if (phoneNumber && !validateVietnamesePhoneNumber(phoneNumber)) {
+          phoneError.classList.remove('hidden');
+        } else {
+          phoneError.classList.add('hidden');
+        }
+      });
+
+      // Validate khi người dùng blur khỏi input
+      phoneInput.addEventListener('blur', function() {
+        const phoneNumber = phoneInput.value.trim();
+        if (phoneNumber && !validateVietnamesePhoneNumber(phoneNumber)) {
+          phoneError.classList.remove('hidden');
+        }
+      });
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const phoneNumber = phoneInput.value.trim();
+        
+        // Validate số điện thoại trước khi gửi
+        if (!validateVietnamesePhoneNumber(phoneNumber)) {
+          phoneError.classList.remove('hidden');
+          return; // Dừng việc submit nếu số điện thoại không hợp lệ
+        }
+        
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Đang gửi...';
+        
+        // Google Apps Script deployed URL - Bạn cần thay thế URL này bằng URL của Google Apps Script của bạn
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyRpnGnj3SQo-Ff8YTqrkLBKa6BN0nDF0ESg_JUGhvKmxgRfbePehON1GF2KablSiMs/exec';
+        
+        try {
+          const response = await fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors', // Cần thiết cho cross-origin requests
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ 
+              phone: phoneNumber,
+              timestamp: new Date().toISOString()
+            })
+          });
+          
+          // Hiển thị thông báo thành công
+          formStatus.classList.remove('hidden');
+          successMessage.classList.remove('hidden');
+          errorMessage.classList.add('hidden');
+          form.reset();
+        } catch (error: unknown) {
+          console.error('Error!', error instanceof Error ? error.message : 'Unknown error');
+          
+          // Hiển thị thông báo lỗi
+          formStatus.classList.remove('hidden');
+          errorMessage.classList.remove('hidden');
+          successMessage.classList.add('hidden');
+        } finally {
+          // Khôi phục trạng thái nút
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Liên hệ ngay';
+          
+          // Ẩn thông báo sau 5 giây
+          setTimeout(() => {
+            formStatus.classList.add('hidden');
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+          }, 5000);
+        }
+      });
+    }
+  });
+</script>
+  

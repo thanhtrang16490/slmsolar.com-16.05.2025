@@ -1,0 +1,95 @@
+---
+// Danh sách danh mục blog tĩnh
+const BLOG_CATEGORIES = [
+  { id: 'hieu-dung-mua-dung', name: 'Hiểu đúng mua đúng', slug: 'hieu-dung-mua-dung' },
+  { id: 'review-solarmax', name: 'Review SolarMax', slug: 'review-solarmax' },
+  { id: 'hoi-xoay-hoi-xoay', name: 'Hỏi xoay hỏi xoáy', slug: 'hoi-xoay-hoi-xoay' },
+  { id: 'em-biet-khong', name: 'Em biết không', slug: 'em-biet-khong' },
+];
+
+// Mặc định chọn danh mục "Hiểu đúng mua đúng"
+let selectedCategory: string | null = 'hieu-dung-mua-dung';
+---
+
+<div class="lg:w-1/4">
+  <div class="sticky top-28">
+    <div class="bg-white/30 backdrop-blur-sm rounded-xl border border-white/30 shadow-lg p-6">
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">
+        Chuyên mục
+      </h3>
+      <nav class="flex flex-col gap-2">
+        <a
+          href="/blog"
+          data-astro-prefetch="false"
+          onclick="navigateTo(event, null)"
+          class={`text-left px-4 py-2 rounded-lg transition-colors duration-200 ${
+            selectedCategory === null
+              ? 'bg-green-600 text-white'
+              : 'hover:bg-green-50 text-gray-700'
+          }`}
+        >
+          Tất cả
+        </a>
+        {BLOG_CATEGORIES.map((category) => (
+          <a
+            href={`/blog/${category.slug}`}
+            data-astro-prefetch="false"
+            onclick={`navigateTo(event, '${category.id}')`}
+            class={`text-left px-4 py-2 rounded-lg transition-colors duration-200 ${
+              selectedCategory === category.id
+                ? 'bg-green-600 text-white'
+                : 'hover:bg-green-50 text-gray-700'
+            }`}
+          >
+            {category.name}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Hàm xử lý navigation mà không reload trang
+  function navigateTo(event: MouseEvent, categoryId: string | null) {
+    // Ngăn hành vi mặc định của trình duyệt
+    event.preventDefault();
+    
+    // Lấy URL từ thuộc tính href
+    const url = (event.currentTarget as HTMLAnchorElement).getAttribute('href');
+    
+    // Cập nhật URL mà không reload trang
+    window.history.pushState({}, '', url);
+    
+    // Dispatch một sự kiện tùy chỉnh để các component khác có thể lắng nghe
+    const customEvent = new CustomEvent('categoryChange', { 
+      detail: { categoryId } 
+    });
+    window.dispatchEvent(customEvent);
+    
+    // Cập nhật trạng thái active của menu
+    updateActiveMenu(categoryId);
+  }
+
+  // Cập nhật giao diện menu khi chuyển category
+  function updateActiveMenu(categoryId: string | null) {
+    // Xóa class active từ tất cả các link
+    document.querySelectorAll('nav a').forEach(link => {
+      if (link.classList.contains('bg-green-600')) {
+        link.classList.remove('bg-green-600', 'text-white');
+        link.classList.add('hover:bg-green-50', 'text-gray-700');
+      }
+    });
+    
+    // Thêm class active vào link được chọn
+    const selector = categoryId 
+      ? `nav a[href="/blog/${categoryId}"]` 
+      : 'nav a[href="/blog"]';
+    
+    const activeLink = document.querySelector(selector);
+    if (activeLink) {
+      activeLink.classList.remove('hover:bg-green-50', 'text-gray-700');
+      activeLink.classList.add('bg-green-600', 'text-white');
+    }
+  }
+</script>

@@ -1,0 +1,21 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import Header from '../../../components/blog/header.astro';
+import UnavailableContent from '../../../components/UnavailableContent.astro';
+
+// Không còn sử dụng API Strapi
+// import fetchApi from "../../../lib/strapi.ts";
+// import type { default as BlogType, BlogCategory } from "../../../interfaces/blogs.ts";
+// import BlogComponent from '../../../components/blog/blog.tsx'
+// import MenuBloghieudungmuadung from '../../../components/blog/menubloghieudungmuadung.astro'
+---
+
+<Layout title="Blog - Hiểu đúng mua đúng">
+  <div>
+    <Header />
+    <UnavailableContent 
+      title="Blog Hiểu đúng mua đúng đang được cập nhật" 
+      description="Nội dung blog hiện không khả dụng do chúng tôi đang tiến hành nâng cấp hệ thống. Vui lòng quay lại sau."
+    />
+  </div>
+</Layout>

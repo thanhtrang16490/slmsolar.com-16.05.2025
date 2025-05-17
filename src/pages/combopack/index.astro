@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import UnavailableContent from '../../components/UnavailableContent.astro';
+
+// Không còn sử dụng API Strapi
+// import fetchApi from "../../lib/strapi.ts"
+// import type { ComboPack } from "../../interfaces/combopack"
+---
+
+<Layout title="Combo Pack">
+  <div class="relative overflow-hidden bg-white">
+    <div class="mx-auto max-w-7xl">
+      <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
+        <main class="mx-auto px-4 sm:px-6 lg:px-8">
+          <UnavailableContent 
+            title="Combo Pack đang được cập nhật" 
+            description="Nội dung về Combo Pack hiện không khả dụng do chúng tôi đang tiến hành nâng cấp hệ thống. Vui lòng quay lại sau."
+          />
+        </main>
+      </div>
+    </div>
+  </div>
+</Layout>

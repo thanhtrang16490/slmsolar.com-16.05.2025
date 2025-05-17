@@ -1,0 +1,122 @@
+---
+import GiaiPhapMai from "../../../components/giai-phap/giaiphapmai.astro";
+import Layout from "../../../layouts/Layout.astro";
+const data = {
+  pageContent: {
+    title: "Giải pháp thi công mái ngói với SolarMax",
+    subtitle: "Giải pháp SoLarMax",
+    heading: "Giải pháp thi công mái ngói với SolarMax",
+    description: "Hệ thống giá đỡ SolarMax – PR được thiết kế linh hoạt để phù hợp với nhiều loại mái ngói khác nhau. Với các chân gá lắp đặt đa dạng về kiểu dáng và kích thước, hệ thống giúp việc thi công trở nên thuận tiện, nhanh chóng, đồng thời đảm bảo tính an toàn và không làm ảnh hưởng đến kết cấu mái."
+  },
+  mainImage: {
+    src: "/images/giai-phap-mai-ngoi_main.png",
+    alt: "Giải pháp thi công mái ngói với SolarMax"
+  },
+  headerImage: {
+    src: "/images/mai-ngoi/mai-ngoi-header.jpg",
+    alt: "Mái ngói lắp điện mặt trời",
+    width: 1920,
+    height: 1080
+  },
+  components: [
+    {
+      title: "Kẹp biên nhôm",
+      description: "Giữ chặt mép ngoài của tấm pin, đảm bảo tính cố định chắc chắn."
+    },
+    {
+      title: "Kẹp giữa nhôm",
+      description: "Kết nối các tấm pin liền kề, giúp hệ thống bền vững và an toàn."
+    },
+    {
+      title: "Thanh nối nhôm",
+      description: "Tăng cường độ chắc chắn và kết nối rail nhôm hiệu quả."
+    },
+    {
+      title: "Rail nhôm cao cấp",
+      description: "Đóng vai trò làm giá đỡ chính cho tấm pin, giúp tối ưu độ bền và khả năng chịu tải."
+    },
+    {
+      title: "Chân mái ngói",
+      description: "Được thiết kế chuyên biệt để cố định hệ thống trên mái ngói mà không làm ảnh hưởng đến kết cấu mái."
+    }
+  ],
+  steps: [
+    {
+      title: "Bước 1: Lắp chân mái ngói",
+      description: "Gỡ một số viên ngói để lắp đặt chân mái ngói lên xà gồ. Sử dụng vít và bulong chuyên dụng để cố định chắc chắn. Đảm bảo chân đỡ có độ vững chắc, chịu được tải trọng của hệ thống.",
+      img: "/images/giai-phap-mai-ngoi_00003.png",
+    },
+    {
+      title: "Bước 2: Lắp đặt rail nhôm đỡ pin",
+      description: "Gắn rail nhôm vào chân mái ngói và cố định bằng vít. Căn chỉnh rail nhôm đảm bảo vị trí lắp đặt chính xác.",
+      img: "/images/giai-phap-mai-ngoi_00002.png",
+    },
+    {
+      title: "Bước 3: Lắp đặt tấm pin năng lượng mặt trời",
+      description: "Đặt các tấm pin lên hệ thống rail và cố định bằng kẹp biên, kẹp giữa. Kiểm tra độ chắc chắn và siết chặt các mối liên kết. Kiểm tra độ nghiêng và căn chỉnh hệ thống để tối ưu hiệu suất hấp thụ ánh sáng mặt trời.",
+      img: "/images/giai-phap-mai-ngoi_00001.png",
+    }
+  ],
+  advantages: [
+    {
+      title: "Tương thích với nhiều loại mái ngói",
+      description: "Có thể lắp đặt trên mái ngói đất nung, mái ngói xi măng, mái ngói tráng men…",
+      icon: "adjustments"
+    },
+    {
+      title: "Đảm bảo kết cấu mái",
+      description: "Không cần khoan trực tiếp vào ngói, hạn chế tối đa nguy cơ thấm dột.",
+      icon: "shield"
+    },
+    {
+      title: "Lắp đặt nhanh chóng",
+      description: "Hệ thống chân gá chuyên dụng giúp đơn giản hóa quá trình thi công.",
+      icon: "clock"
+    },
+    {
+      title: "Bền bỉ và ổn định",
+      description: "Vật liệu chống ăn mòn, chịu lực tốt, đảm bảo hệ thống hoạt động ổn định trong thời gian dài.",
+      icon: "chart"
+    }
+  ],
+  sampleImages: [
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00001.jpg",
+      alt: "Lắp đặt điện mặt trời mái tôn cho nhà xưởng",
+    },
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00002.JPG",
+      alt: "Hệ thống điện mặt trời mái tôn công nghiệp",
+    },
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00003.JPG",
+      alt: "Thi công điện mặt trời mái tôn nhà máy",
+    },
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00004.JPG",
+      alt: "Lắp đặt pin năng lượng mặt trời mái tôn",
+    },
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00005.JPG",
+      alt: "Hệ thống năng lượng mặt trời mái tôn",
+    },
+    {
+      src: "/images/anh-thuc-te-giai-phap-mai-ngoi-00006.JPG",
+      alt: "Giải pháp điện mặt trời mái tôn",
+    }
+  ],
+  systemName: "PR"
+};
+---
+<Layout title={data.pageContent.title}>
+  <GiaiPhapMai 
+    pageContent={data.pageContent}
+    components={data.components}
+    steps={data.steps}
+    advantages={data.advantages}
+    sampleImages={data.sampleImages}
+    systemName={data.systemName}
+    mainImage={data.mainImage}
+    headerImage={data.headerImage}
+  />
+  </Layout>

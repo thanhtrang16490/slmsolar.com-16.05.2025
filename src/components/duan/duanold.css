@@ -1,0 +1,38 @@
+.video-modal .ant-modal-content {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.video-modal .ant-modal-close {
+  top: -30px !important;
+  right: -30px !important;
+  color: white !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(4px);
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s !important;
+}
+
+.video-modal .ant-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.1);
+}
+
+.video-modal .ant-modal-close-x {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 16px !important;
+}
+
+.video-modal .ant-modal-body {
+  line-height: 0;
+} 

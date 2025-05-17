@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import UnavailableContent from '../../components/UnavailableContent.astro';
+
+// Không còn sử dụng API Strapi
+// import fetchApi from "../../lib/strapi.ts";
+// import type { Blogs } from "../../interfaces/blogs.ts";
+// import Detail from "../../components/blog/Detail.tsx";
+
+// Trong trang động [slug].astro, chúng ta cần trả về một mảng với ít nhất một phần tử
+// để tránh lỗi URL constructor trong quá trình build
+export function getStaticPaths() {
+  // Trả về một phần tử giả
+  return [
+    { params: { slug: 'placeholder' } }
+  ];
+}
+
+// Trong trường hợp có người truy cập trực tiếp vào URL, hiển thị thông báo
+---
+
+<Layout title="Blog - Nội dung không khả dụng">
+  <UnavailableContent 
+    title="Bài viết blog không khả dụng" 
+    description="Nội dung bài viết blog này tạm thời không hiển thị được do chúng tôi đang nâng cấp hệ thống. Vui lòng quay lại sau hoặc xem các nội dung khác."
+  />
+</Layout>

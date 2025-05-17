@@ -1,0 +1,53 @@
+/* Thêm styles cho container của Carousel */
+.ant-carousel {
+    position: relative;
+}
+
+/* Style cho các nút điều hướng */
+.custom-arrow-prev,
+.custom-arrow-next {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.custom-arrow-prev {
+    left: -40px;
+}
+
+.custom-arrow-next {
+    right: -40px;
+}
+
+.custom-arrow-prev:hover,
+.custom-arrow-next:hover {
+    background: rgba(255, 255, 255, 1);
+    opacity: 1;
+}
+
+/* Đảm bảo container có padding để hiển thị arrows */
+.ant-carousel .slick-slider {
+    padding: 0 40px;
+}
+
+/* Style cho icon trong nút */
+.custom-arrow-prev .anticon,
+.custom-arrow-next .anticon {
+    color: #333;
+    font-size: 16px;
+} 

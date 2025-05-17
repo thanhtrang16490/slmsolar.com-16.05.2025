@@ -1,0 +1,84 @@
+---
+import VideoSolar from "../components/video.solar.tsx";
+const features = [
+  {
+    title: "Thân thiện với môi trường",
+    description:
+      "Năng lượng mặt trời không sử dụng nhiên liệu hóa thạch, không gây ô nhiễm và không tạo hiện tượng nóng lên toàn cầu.",
+    icon: `<path d="M10 2a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 2Zm0 13a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 10 15Zm7.25-6.75a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5Zm-13 0a.75.75 0 0 0-1.5 0v1.5a.75.75 0 0 0 1.5 0v-1.5Zm11.316-4.036a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 1 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.192 9.193a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 1 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0Zm9.192 1.06a.75.75 0 0 1-1.06 0l-1.06-1.06a.75.75 0 1 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06Zm-9.192-9.193a.75.75 0 0 1-1.06 0l-1.06-1.06a.75.75 0 0 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06ZM10 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/>`,
+  },
+  {
+    title: "Hiệu quả về chi phí, tiết kiệm lâu dài",
+    description:
+      "Năng lượng mặt trời là nguồn năng lượng tái tạo, rất đáng tin cậy. Thời gian sử dụng dài hạn giúp tiết kiệm hóa đơn tiền điện cho mọi gia đình.",
+    icon: `<path d="M10.75 10.818v2.614A3.13 3.13 0 0 0 11.25 13c.5 0 .981.098 1.419.275v-2.457c-.473.2-.973.307-1.419.307-.446 0-.946-.107-1.419-.307ZM8.581 8.68c-.376-.216-.761-.377-1.162-.471v3.201a2.93 2.93 0 0 1 1.162-.47V8.68Zm2.338.117c.533.261 1.162.44 1.831.44.555 0 1.062-.114 1.533-.31v2.24c-.236.102-.463.177-.679.224v.27c-.176.037-.36.057-.554.057-.344 0-.741-.065-1.167-.195v-2.726Zm1.831-1.116c-.227 0-.452.037-.678.112V6.14h1.9v1.425a2.76 2.76 0 0 0-1.222.117Zm-5.686.3V6.14h1.9v1.752c-.253-.084-.517-.128-.789-.128-.414 0-.814.07-1.111.214Zm4.255-.375c.518 0 .992.1 1.431.3v-1.19a4.8 4.8 0 0 0-1.431-.22c-.507 0-.995.088-1.431.219v1.19c.439-.2.913-.3 1.431-.3ZM2.5 3.75v10.5c0 .966.784 1.75 1.75 1.75h11.5a1.75 1.75 0 0 0 1.75-1.75V3.75a1.75 1.75 0 0 0-1.75-1.75H4.25A1.75 1.75 0 0 0 2.5 3.75ZM4 15v-1.5h12V15H4Zm0-2.25V3.75a.25.25 0 0 1 .25-.25h11.5a.25.25 0 0 1 .25.25v9H4Z"/>`,
+  },
+  {
+    title: "Tăng cường tự chủ nguồn năng lượng",
+    description:
+      "Năng lượng mặt trời giúp bạn giảm phụ thuộc vào lưới điện. Khi kết hợp với hệ thống pin dự phòng, bạn sẽ không bị ảnh hưởng bởi các sự cố mất điện hoặc thời tiết xấu.",
+    icon: `<path d="M11.983 1.907a.75.75 0 0 0-1.292-.657l-8.5 9.5A.75.75 0 0 0 2.75 12h6.572l-1.305 6.093a.75.75 0 0 0 1.292.657l8.5-9.5A.75.75 0 0 0 17.25 8h-6.572l1.305-6.093Z"/>`,
+  },
+];
+---
+
+<div class="hidden lg:block overflow-hidden bg-white py-12 sm:py-16">
+  <div class="mx-auto container md:px-6 lg:px-8">
+    <div
+      class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start"
+    >
+      <div class="px-6 lg:px-0 lg:pt-2 lg:pr-4">
+        <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+          <div class="text-base/7 font-semibold text-green-600">
+            <img 
+            src="/images/logo-solarmax.svg"
+            alt="SolarMax Logo" class="h-4 inline-block" />
+          </div>
+          <p
+            class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl"
+          >
+            TẠI SAO CẦN SỬ DỤNG ĐIỆN MẶT TRỜI?
+          </p>
+          <p class="mt-6 text-lg/8 text-gray-600">
+            Theo Bộ Năng lượng Hoa Kỳ, mỗi ngày, 173.000 terawatt năng lượng mặt
+            trời chiếu xuống Trái đất, gấp 10.000 lần tổng mức sử dụng năng
+            lượng toàn cầu. Đây là nguồn năng lượng miễn phí, bền vững và sạch,
+            có thể thay thế điện thông thường để cung cấp cho nhu cầu điện trong
+            các tòa nhà.
+          </p>
+          <dl
+            class="mt-5 max-w-xl space-y-4 text-base/7 text-gray-600 lg:max-w-none"
+          >
+            {
+              features.map((feature) => (
+                <div class="relative pl-9 flex flex-col gap-0">
+                  <dt class="inline font-bold text-gray-900">
+                    <svg
+                      class="absolute top-1 left-1 size-5 text-green-600"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                      data-slot="icon"
+                    >
+                      <Fragment set:html={feature.icon} />
+                    </svg>
+                    {feature.title}
+                  </dt>
+                  <div>
+                    
+                    <dd class="inline">{feature.description}</dd>
+                  </div>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+      </div>
+      <div class="sm:px-6 lg:px-0 my-auto">
+        <div class="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
+          <VideoSolar client:load />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

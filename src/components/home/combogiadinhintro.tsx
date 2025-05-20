@@ -143,7 +143,7 @@ const hybridTiers = [
       'Hệ điện: 3 pha áp thấp',
       'Pin lưu trữ Lithium',
       'Sản lượng: 1000-1300 kwh/tháng',
-      'Diện tích lắp đặt: 51 m2'
+      'Diện tích lắp đặt: 51 m2.'
     ],
     mostPopular: false,
   },

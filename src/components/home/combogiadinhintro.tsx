@@ -134,7 +134,7 @@ const hybridTiers = [
     name: '10.2 kW - 3 pha áp thấp',
     id: 'tier-102-3p-low',
     href: '#',
-    price: '149.300.000',
+    price: '150.300.000',
     hoiVon: 'Hoàn vốn: 40 tháng',
     hieuQua: 'Hiệu quả/tháng: 3.800.000đ',
     description: 'Off-Grid | 3 pha | JA 110 | Solis 120 | easyway 50 - Áp thấp',
